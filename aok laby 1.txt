@@ -1,0 +1,4 @@
+ita.wat.edu.pl/~a.miktus/
+log po zamknięciu programu bo suma kontrolna
+wejściówka z przeliczania po systemach liczbowych na 2 labach (liczby stałoprzecinkowe)
+za 0 z zadań jest wpierdol

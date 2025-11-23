@@ -1,0 +1,3 @@
+z bus do lk 7 bitów 
+zerowanie raps
+op aop+32
