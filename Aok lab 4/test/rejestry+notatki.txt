@@ -1,13 +1,20 @@
+Tymkowe
 A 32108
 LR 8
 RI 100
 MQ 111
+Miktusowe
+
+
+
+
+
 
 overflow
 -65 536 do sumy jeśli ponad 32 768
 sht
-
+podziel przez 2 z zachowaniem znaku i zaokrągleniem w dół
 tlk -test
 jak lk>0 to next linijka jak nie to tak co jest w na
 NOTL
-ujemne lalu (-1 przy nieparzystej) do alu
+negacja hexa i chuj
