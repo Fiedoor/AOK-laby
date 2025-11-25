@@ -1,0 +1,13 @@
+A 32108
+LR 8
+RI 100
+MQ 111
+
+overflow
+-65 536 do sumy jeśli ponad 32 768
+sht
+
+tlk -test
+jak lk>0 to next linijka jak nie to tak co jest w na
+NOTL
+ujemne lalu (-1 przy nieparzystej) do alu

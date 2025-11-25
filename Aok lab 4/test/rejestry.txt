@@ -1,9 +1,0 @@
-A 32108
-LR 8
-RI 100
-MQ 111
-
-overflow
-sht
-tlk
-NOTL
