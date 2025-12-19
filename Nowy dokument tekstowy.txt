@@ -1,0 +1,3 @@
+load na wektorach
+float double itp 
+kilka rozkazów typu load i podać wartości rejestrów na koniec programu

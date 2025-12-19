@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<title>Lab6</title>
+<style type="text/css">
+ p.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	}
+p.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	}
+p.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	}
+p.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	}
+.auto-style1 {
+	background-color: #00FF00;
+}
+.auto-style2 {
+	background-color: #FFFF00;
+}
+.auto-style3 {
+	font-weight: bold;
+	background-color: #FFFF00;
+}
+</style>
+</head>
+
+<body>
+
+<p class="MsoNormal"><span style="background: yellow; mso-highlight: yellow">
+Lab6 (11-12) KY1 2025 </span></p>
+<p class="MsoNormal">Pierwszym parametrem w tym zadaniu będzie <b>
+<span class="auto-style2">k = reszta z 
+dzielenia</span> całkowitego ostatniej cyfry numeru albumu autorki/ autora sprawozdania 
+przez 6</b>. Oczywiście wartość tej reszty, czyli wynik operacji (<strong>ostatnia_cyfra
+</strong>
+<span style="background: yellow; mso-highlight: yellow"><strong>mod 6</strong></span>) przyjmować 
+będzie wartości ze zbioru [0,1,2,3,4,5]. <o:p></o:p></p>
+<p class="MsoNormal">Drugim parametrem będzie <b><span class="auto-style1">nr = numer_w_dzienniku</span> autorki/ 
+autora sprawozdania (numer na liście grupy w USOS, uwaga - nie numer albumu).<o:p></o:p></b></p>
+<p class="MsoNormal"><o:p>&nbsp;<o:p>Wszystkie zamieszczane obrazki maja być 
+czytelne = wyraźne i duże, pokazujące wybrane fragmenty ekranu z interfejsem 
+WinDLX a nie cały ekran Windows.</o:p></o:p></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal">Napisać program w asemblerze komputera WinDLX, który<o:p></o:p></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt;mso-list:l2 level1 lfo1">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Zadeklaruje statycznie (jak w przykładzie z mojej 
+strony Lab5 dla zmiennej „tablica_B”)<span style="mso-spacerun:yes">&nbsp;
+</span><b>rozmiar = (k+10)</b> <span style="mso-spacerun:yes">&nbsp;</span>elementowy 
+wektor liczb całkowitych o nazwie <b>wektor</b>, pierwszy element o wartości 
+równej <b>100+nr</b>, każdy następny o (<b>k+10)</b> większy;<br>
+</p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l2 level1 lfo1">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->W pętli <b>policzy sumę elementów wektora dla 
+jego wartości początkowych</b> do rejestru <strong>Rnr</strong> (dla osoby o numerze <b>5</b> do 
+R<b>5</b>, dla osoby o numerze <b>10</b> do R<b>10</b> itd.) a następnie zapisze 
+zawartość Rnr do zmiennej <b>suma1;<br>
+</b></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l2 level1 lfo1">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Zadeklaruje stałą <b>stala</b>, równą <strong>
+iloczynowi (k+1) i nr</strong>;<br>
+</p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l2 level1 lfo1">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->W pętli <b>zwiększy zawartość każdego elementu 
+wektora o stałą stala i zapisze w miejscu dotychczasowego elementu;<br>
+</b></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l2 level1 lfo1">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->W pętli policzy <b>sumę elementów wektora dla 
+jego wartości po modyfikacji</b> do rejestru <strong>R(nr+1)</strong>, a następnie zapisze zawartość 
+<strong>R(nr+1)</strong> do zmiennej<span style="mso-spacerun:yes">&nbsp; </span><b>suma2;<br>
+</b></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l2 level1 lfo1">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->W rejestrze <strong>R(nr+2)</strong> obliczy (<b>różnicę = suma2 - 
+suma1</b>) i wynik zapisze do zmiennej <b>roznica;<br>
+</b></p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt;mso-list:l2 level1 lfo1">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">7.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->W rejestrze <strong>R(nr+3)</strong> obliczy <b>iloczyn = rozmiar x 
+stala</b> i wynik zapisze do zmiennej <b>iloczyn</b>.</p>
+<p class="MsoNormal">W sprawozdaniu:<o:p></o:p></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt;mso-list:l0 level1 lfo3">
+<a name="_Hlk58852861"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:
+Calibri;mso-bidi-theme-font:minor-latin"><span style="mso-list:Ignore">A.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Zamieścić treść zadania z mojej strony. 
+<span class="auto-style2">Jawnie 
+podać wartości </span><span class="auto-style3">k, nr i stala</span>, wyniki obliczeń wartości <b>wektora (przed 
+i po modyfikacji)</b> i wyników obliczeń: <b>suma1</b>, <b>suma2</b>, <b>roznica</b>,
+<b>iloczyn</b> – uzyskane dla obliczeń pisemnych.<o:p></o:p></a></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l0 level1 lfo3">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">B.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Zamieścić listing napisanego przez siebie 
+programu w postaci tekstowej, możliwej do „skopiowania” w przeglądarce typu 
+Adobe Reader – nie zamieszczać tekstu programu w postaci obrazka. Muszę mieć 
+możliwość skopiowania Waszego programu do mojej maszyny wirtualnej i sprawdzenia 
+poprawności działania.<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l0 level1 lfo3">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">C.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Zamieścić zrzutu ekranu z WinDLX z uzyskanymi 
+wynikami, w tym <o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo3"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">a.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->na jednym z obrazków ze stanem początkowym 
+wektora i wyzerowanymi zmiennymi wynikowymi (okienko Memory/ Display, 
+odpowiednio skonfigurowane);<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo3"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">b.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->na drugim z obrazków ze stanem wektora i wynikami 
+obliczeń <b>suma1</b>, <b>suma2</b>, <b>roznica</b>, <b>iloczyn</b> – po 
+zakończeniu wykonywania programu (okienko Memory/ Display, odpowiednio 
+skonfigurowane);<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo3"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">c.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Na trzecim z obrazków stan czytelnego 
+okienka Menu/ Window/ <b>Statistics</b>.</p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo3">d.&nbsp;&nbsp;&nbsp;&nbsp; Na 
+czwartym z obrazków stan Rejestrów Całkowitych po wykonaniu programu.</p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l0 level1 lfo3">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">D.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Zamieścić algorytm swojego programu w postaci 
+graficznej i krótko ten algorytm opisać, ze szczególnym uwzględnieniem warunków 
+wyjścia z każdej pętli.<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l0 level1 lfo3">
+<!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">E.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->W zależności od swojej wartości <b>k</b> wybrać
+<b>jedną</b> z instrukcji swojego programu, odpowiednio<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo3"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">a.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->k=0,1 rozkaz typu load albo branch;<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo3"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">b.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->k=2,3 rozkaz typu arithmetic immediate;<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo3"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">c.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->k=4,5 rozkaz typu store<br>
+i opisać zmiany w rejestrach <b>R</b> i tymczasowych (<b>A, B, Imm</b> itp.) w 
+trakcie kompletnego wykonania tego rozkazu przez poszczególne etapy komputera 
+WinDLX, podobnie do mojego opisu na 
+http://www.ita.wat.edu.pl/~a.miktus/AOK/Lab6/Etapy_potoku_DLX.html .<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo3"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">d.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Opis ma być uzupełniony zrzutami ekranu z WinDLX, 
+pokazującymi opisywane zmiany dla tej jednej, wybranej instrukcji.<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle"><o:p>&nbsp;</o:p></p>
+<p class="MsoListParagraphCxSpMiddle"><o:p>&nbsp;</o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:0cm;mso-add-space:auto">
+Stopień trudności zadania:<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l1 level1 lfo2"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Na ocenę <b>dst</b> punkty <b>1 – 2</b> zadania i
+<b>A – D</b> sprawozdania.<o:p></o:p></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l1 level1 lfo2"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Na ocenę <b>db</b> punkty <b>1 – 5</b> zadania i
+<b>A – D</b> sprawozdania.<o:p></o:p></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left:18.0pt;mso-add-space:auto;
+text-indent:-18.0pt;mso-list:l1 level1 lfo2"><!--[if !supportLists]-->
+<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">
+<span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]-->Na ocenę <b>bdb</b> punkty <b>1 – 7</b> zadania i
+<b>A – E</b> sprawozdania (czyli wszystko).<o:p></o:p></p>
+<p class="MsoNormal">W przypadku stwierdzenia niesamodzielnej pracy (działania 
+dla nie swojej <strong>ostatniej cyfry numeru albumu</strong> albo nie swojego
+<strong>numeru w dzienniku</strong>) = 
+nieuczciwości studentów osoby oszukujące (dawca i biorcy) za zadanie otrzymują 
+ocenę <b>zero do średniej</b>. To samo w przypadku niewykonania zadania i 
+nieprzysłania sprawozdania w terminie.<o:p></o:p></p>
+
+
+
+
+</body></html>
