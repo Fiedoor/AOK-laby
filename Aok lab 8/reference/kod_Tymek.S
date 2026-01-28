@@ -16,7 +16,7 @@ ld f2, skladnik
 ld f4, ulamek 
 ld f8, nr			; ładowanie WSZYSTKIEGO
 ld f10, jeden
-lw r4, rozmiarT
+lw r4, rozmiarT		; licznik/iterator
 addd f6, f2, f4 	; dodawanie double
 addd f6, f6, f8 	; tu też
 loop1:  			; pętla do wypełniania TB

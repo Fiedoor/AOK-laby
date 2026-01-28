@@ -1,0 +1,25 @@
+r1 pointer T
+r2 pointer TB
+r3 licznik
+
+f0 skladnik
+f2 ulamek
+f4 numer
+f6 jedynka
+f8 liczony element
+f10 stala
+
+f26 żolty
+f28 zielony
+f30 suma
+f28 wynik tb
+
+f12-f24 składniki do TB
+
+T[1]=skladnik+ulamek+nr
+T[i]=t[i-1]+1
+
+TB[i]= [ (5.2 * T[i] * T[i+1] * T[i+6])  -  (T[i+2]+ T[i+3]+T[i+4]) ] / [T[i+5] ]
+
+5.2
+f parzyste
